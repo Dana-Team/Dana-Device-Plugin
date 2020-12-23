@@ -18,7 +18,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 		dp.NewDanaDevicePlugin("dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2idan22.sock hatul3"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan22.sock hatul4"),
 	}
 }
 
@@ -42,7 +42,6 @@ func main() {
 	if err != nil {
 		log.Println("Failed to created FS watcher.")
 		fmt.Print(err)
-		fmt.Print(pluginapi.DevicePluginPath + "nvidia-new2dd.sock")
 		os.Exit(1)
 	}
 	defer watcher.Close()
