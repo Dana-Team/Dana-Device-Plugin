@@ -18,7 +18,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 		dp.NewDanaDevicePlugin("dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2idan22.sock hatul6"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan22.sock hatul7"),
 	}
 }
 
