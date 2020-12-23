@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec4ba89b-f78b-460a-ba77-ddeed524b1ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bulbul.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/deviceplugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/deviceplugin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/allocator.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/allocator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/besteffort_policy.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/besteffort_policy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/common_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/common_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/device.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/device.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/nvml/nvml_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/nvml/nvml_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,5 +56,9 @@
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
     <state x="2117" y="698" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608653267887" />
+    <state x="2190" y="881" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608718696079">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2190" y="881" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608718696079" />
   </component>
 </project>
