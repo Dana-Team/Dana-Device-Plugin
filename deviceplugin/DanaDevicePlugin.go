@@ -1,6 +1,7 @@
 package deviceplugin
 
 import (
+	"fmt"
 	"github.com/Dana-Team/Dana-Device-Plugin/third_party/gpuallocator"
 	"google.golang.org/grpc"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
@@ -67,6 +68,8 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 func (m *DanaDevicePlugin) ApiDeviceSpecs(filter []string) []*pluginapi.DeviceSpec {
 	var specs []*pluginapi.DeviceSpec
 
+
+	fmt.Print(" \n Start ApiDeviceSpecs FUNC   : \n m.cachedDevices ")
 	paths := []string{
 		"/run/nvidia/driver/dev/nvidiactl",
 		"/run/nvidia/driver/dev/nvidia-uvm",
