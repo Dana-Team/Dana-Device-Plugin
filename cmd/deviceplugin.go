@@ -26,7 +26,7 @@ func main() {
 	flag.Parse()
 
 	log.Println("Loading NVML")
-	log.Println("devsapce test update test")
+	log.Println("devsapce test update test 2")
 	if err := nvml.Init(); err != nil {
 		log.Printf("Failed to initialize NVML: %s.", err)
 		log.Printf("If this is a GPU node, did you set the docker default runtime to `nvidia`?")
@@ -42,7 +42,7 @@ func main() {
 	if err != nil {
 		log.Println("Failed to created FS watcher.")
 		fmt.Print(err)
-		fmt.Print(pluginapi.DevicePluginPath + "nvidia.sock")
+		fmt.Print(pluginapi.DevicePluginPath + "nvidia-new.sock")
 		os.Exit(1)
 	}
 	defer watcher.Close()
@@ -54,6 +54,7 @@ func main() {
 	plugins := getAllPlugins()
 
 	for _, p := range plugins {
+		fmt.Print(p)
 		defer p.Stop()
 	}
 
