@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/deviceplugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/deviceplugin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deviceplugin/Allocation.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/Allocation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deviceplugin/ListAndWatch.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/ListAndWatch.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
