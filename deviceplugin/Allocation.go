@@ -40,6 +40,9 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 	}
 	fmt.Print("\n\n reponse_return  %v", &responses )
+
+	fmt.Print( "LISTANDEATCH RESPONSE :  ",&pluginapi.ListAndWatchResponse)
+
 	return &responses, nil
 }
 

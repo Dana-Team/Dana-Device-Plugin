@@ -18,7 +18,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 		dp.NewDanaDevicePlugin("dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2idan.sock"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan2.sock"),
 	}
 }
 
@@ -88,6 +88,8 @@ restart:
 	if started == 0 {
 		log.Println("No devices found. Waiting indefinitely.")
 	}
+
+	fmt.Print( "LISTANDEATCH RESPONSE :  ",&pluginapi.ListAndWatchResponse)
 
 events:
 	// Start an infinite loop, waiting for several indicators to either log
