@@ -18,7 +18,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 		dp.NewDanaDevicePlugin("dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2.sock"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan.sock"),
 	}
 }
 
@@ -26,7 +26,7 @@ func main() {
 	flag.Parse()
 
 	log.Println("Loading NVML")
-	log.Println("devsapce test update test 2")
+	log.Println("devsapce test update2")
 	if err := nvml.Init(); err != nil {
 		log.Printf("Failed to initialize NVML: %s.", err)
 		log.Printf("If this is a GPU node, did you set the docker default runtime to `nvidia`?")
@@ -42,7 +42,7 @@ func main() {
 	if err != nil {
 		log.Println("Failed to created FS watcher.")
 		fmt.Print(err)
-		fmt.Print(pluginapi.DevicePluginPath + "nvidia-new.sock")
+		fmt.Print(pluginapi.DevicePluginPath + "nvidia-new2dd.sock")
 		os.Exit(1)
 	}
 	defer watcher.Close()
