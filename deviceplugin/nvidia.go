@@ -1,6 +1,7 @@
 package deviceplugin
 
 import (
+	"fmt"
 	"github.com/Dana-Team/Dana-Device-Plugin/third_party/nvml"
 	"log"
 	"os"
@@ -40,6 +41,8 @@ func NewGpuDeviceManager() *GpuDeviceManager {
 func (g *GpuDeviceManager) Devices() []*Device {
 	n, err := nvml.GetDeviceCount()
 	check(err)
+
+	fmt.Print("\n \n the DEVICES FUNC IS STARTED   :",n )
 
 	var devs []*Device
 	for i := uint(0); i < n; i++ {

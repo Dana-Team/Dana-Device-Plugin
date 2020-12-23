@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/deviceplugin/Allocation.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/Allocation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deviceplugin/DanaDevicePlugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/DanaDevicePlugin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deviceplugin/grpc-server.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/grpc-server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deviceplugin/nvidia.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/nvidia.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +56,10 @@
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
     <state x="1838" y="617" key="SettingsEditor/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608716343044" />
-    <state x="2117" y="698" width="843" height="568" key="find.popup" timestamp="1608732754591">
+    <state x="1974" y="703" width="843" height="568" key="find.popup" timestamp="1608733905659">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state x="2117" y="698" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608732754591" />
+    <state x="1974" y="703" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608733905659" />
     <state x="2190" y="881" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608718696079">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
