@@ -5,7 +5,7 @@ package gpuallocator
 import (
 	"fmt"
 
-	nvml "github.com/Dana-Team/DanaDevicePlugin/third_party/deviceplugin/nvml"
+	nvml "github.com/Dana-Team/Dana-Device-Plugin/third_party/nvml"
 )
 
 type bestEffortPolicy struct{}

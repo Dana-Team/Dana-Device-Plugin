@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec4ba89b-f78b-460a-ba77-ddeed524b1ed" name="Default Changelist" comment="" />
+    <list default="true" id="ec4ba89b-f78b-460a-ba77-ddeed524b1ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bulbul.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/deviceplugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/deviceplugin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/allocator.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/allocator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/besteffort_policy.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/besteffort_policy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/common_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/common_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/gpuallocator/device.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/gpuallocator/device.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/nvml/nvml_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/nvml/nvml_test.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="GOROOT" path="/usr/lib/go-1.13" />
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m19aJMZJ1Dw8HCNJGGTcV5QfCq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -19,9 +31,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -29,5 +46,23 @@
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>direct</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="1095" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608651317122">
+      <screen x="0" y="851" width="1536" height="864" />
+    </state>
+    <state x="474" y="1095" key="#com.intellij.fileTypes.FileTypeChooser/0.851.1536.864/1920.0.1080.1920@0.851.1536.864" timestamp="1608651317122" />
+    <state x="2248" y="724" key="FileChooserDialogImpl" timestamp="1608716333375">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2248" y="724" key="FileChooserDialogImpl/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608716333375" />
+    <state x="1838" y="617" key="SettingsEditor" timestamp="1608716343044">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1838" y="617" key="SettingsEditor/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608716343044" />
+    <state x="2117" y="698" width="843" height="568" key="find.popup" timestamp="1608653267887">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2117" y="698" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608653267887" />
   </component>
 </project>

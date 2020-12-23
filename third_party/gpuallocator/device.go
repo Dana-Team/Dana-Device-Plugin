@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	nvml "github.com/Dana-Team/DanaDevicePlugin/third_party/deviceplugin/nvml"
+	nvml "github.com/Dana-Team/Dana-Device-Plugin/third_party/deviceplugin/nvml"
 )
 
 // Device represents a GPU device as reported by NVML, including all of its

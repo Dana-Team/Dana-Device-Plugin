@@ -7,7 +7,7 @@ import (
 	"sort"
 	"testing"
 
-	nvml "github.com/Dana-Team/DanaDevicePlugin/third_party/deviceplugin//nvml"
+	nvml "github.com/Dana-Team/Dana-Device-Plugin/third_party/deviceplugin/nvml"
 )
 
 const pad = ^int(0)

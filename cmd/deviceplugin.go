@@ -53,6 +53,11 @@ func main() {
 	log.Println("Retreiving plugins.")
 	plugins := getAllPlugins()
 
+	for _, p := range plugins {
+		defer p.Stop()
+	}
+
+
 restart:
 	// Loop through all plugins, idempotently stopping them, and then starting
 	// them if they have any devices to serve. If even one plugin fails to
