@@ -18,7 +18,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 		dp.NewDanaDevicePlugin("dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2idan.sock"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan22.sock"),
 	}
 }
 
@@ -26,7 +26,7 @@ func main() {
 	flag.Parse()
 
 	log.Println("Loading NVML")
-	log.Println("devsapce test update2")
+	log.Println("devsapce test update2check git")
 	if err := nvml.Init(); err != nil {
 		log.Printf("Failed to initialize NVML: %s.", err)
 		log.Printf("If this is a GPU node, did you set the docker default runtime to `nvidia`?")
@@ -56,7 +56,9 @@ func main() {
 	for _, p := range plugins {
 		fmt.Print(p)
 		defer p.Stop()
+
 	}
+
 
 
 restart:
