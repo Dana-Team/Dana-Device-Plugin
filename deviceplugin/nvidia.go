@@ -88,7 +88,7 @@ func checkHealth(stop <-chan interface{}, devices []*Device, unhealthy chan<- *D
 	defer nvml.DeleteEventSet(eventSet)
 
 	for _, d := range devices {
-		fmt.Print("\n \n devices from checkHealth func :  \n\n ", d)
+		fmt.Print("\n \n devices from checkHealth func : %v  \n\n ", d)
 		err := nvml.RegisterEventForDevice(eventSet, nvml.XidCriticalError, d.ID)
 		if err != nil && strings.HasSuffix(err.Error(), "Not Supported") {
 			log.Printf("Warning: %s is too old to support healthchecking: %s. Marking it unhealthy.", d.ID, err)
