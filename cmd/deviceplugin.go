@@ -21,7 +21,7 @@ func getAllPlugins() []*dp.DanaDevicePlugin {
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
 			gpuallocator.NewBestEffortPolicy(),
-			pluginapi.DevicePluginPath + "nvidia-dp2idan28.sock"),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan29.sock"),
 	}
 }
 
