@@ -117,6 +117,9 @@ func (m *DanaDevicePlugin) Register() error {
 		Version:      pluginapi.Version,
 		Endpoint:     path.Base(m.socket),
 		ResourceName: m.resourceName,
+		Options: &pluginapi.DevicePluginOptions{
+			GetPreferredAllocationAvailable: (m.allocatePolicy != nil),
+		},
 	}
 
 	_, err = client.Register(context.Background(), reqt)
