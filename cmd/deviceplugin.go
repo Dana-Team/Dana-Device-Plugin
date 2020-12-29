@@ -58,26 +58,6 @@ func main() {
 		defer p.Stop()
 	}
 
-	var nodeName string
-	var pods []v1.Pod
-	var nodes []v1.Node
-
-	if nodeName == "" {
-		nodes, err = dp.getAllSharedGPUNode()
-		if err == nil {
-			pods, err = dp.getActivePodsInAllNodes()
-		}
-	} else {
-		nodes, err = dp.getNodes(nodeName)
-		if err == nil {
-			pods, err = dp.getActivePodsByNode(nodeName)
-		}
-	}
-	nodeInfos, err := dp.buildAllNodeInfos(pods, nodes)
-	if err != nil {
-		fmt.Printf("Failed due to %v", err)
-		os.Exit(1)
-	}
 
 restart:
 	// Loop through all plugins, idempotently stopping them, and then starting
