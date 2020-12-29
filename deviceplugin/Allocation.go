@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var passDeviceSpecs = flag.Bool("pass-device-specs", false, "pass the list of DeviceSpecs to the kubelet on Allocate()")
+var passDeviceSpecs = flag.Bool("pass-device-specs", true, "pass the list of DeviceSpecs to the kubelet on Allocate()")
 
 
 func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.AllocateRequest) (*pluginapi.AllocateResponse, error) {
