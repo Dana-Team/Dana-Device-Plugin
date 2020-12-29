@@ -57,10 +57,14 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 			return nil, fmt.Errorf("Unable to retrieve list of available devices: %v", err)
 		}
 
+		fmt.Print("\n available  : ",available ,"\n")
+
 		required, err := gpuallocator.NewDevicesFrom(req.MustIncludeDeviceIDs)
 		if err != nil {
 			return nil, fmt.Errorf("Unable to retrieve list of required devices: %v", err)
 		}
+
+		fmt.Print("\n required  : ",required ,"\n")
 
 		allocated := m.allocatePolicy.Allocate(available, required, int(req.AllocationSize))
 
