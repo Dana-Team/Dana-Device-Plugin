@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 	"os"
-	"golang.org/x/net/context"
+	//"golang.org/x/net/context"
 )
 
 // DanaDevicePlugin implements the Kubernetes device plugin API
