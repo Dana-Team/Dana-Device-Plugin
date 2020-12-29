@@ -25,11 +25,13 @@ type DanaDevicePlugin struct {
 }
 type allocatePolicy gpuallocator.Policy
 
-func NewDanaDevicePlugin(resourceName string, resourceManager ResourceManager,  allocateEnvvar string, socket string) *DanaDevicePlugin {
+func NewDanaDevicePlugin(resourceName string, resourceManager ResourceManager,  allocateEnvvar string, allocatePolicy gpuallocator.Policy ,socket string) *DanaDevicePlugin {
 	return &DanaDevicePlugin{
 		ResourceManager: resourceManager,
 		resourceName:    resourceName,
 		socket:          socket,
+		allocatePolicy:  allocatePolicy,
+
 		allocateEnvvar:	allocateEnvvar,
 		avalDevices: nil,
 
