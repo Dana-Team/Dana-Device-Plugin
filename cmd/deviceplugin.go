@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	dp "github.com/Dana-Team/Dana-Device-Plugin/deviceplugin"
+	"github.com/Dana-Team/Dana-Device-Plugin/third_party/gpuallocator"
 	nvml "github.com/Dana-Team/Dana-Device-Plugin/third_party/nvml"
 	"github.com/fsnotify/fsnotify"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
@@ -15,10 +16,12 @@ import (
 
 func getAllPlugins() []*dp.DanaDevicePlugin {
 	return []*dp.DanaDevicePlugin{
-		dp.NewDanaDevicePlugin("dana.894/gpu",
+		dp.NewDanaDevicePlugin(
+			"dana.894/gpu",
 			dp.NewGpuDeviceManager(),
 			"NVIDIA_VISIBLE_DEVICES" ,
-			pluginapi.DevicePluginPath + "nvidia-dp2idan14.sock"),
+			gpuallocator.NewBestEffortPolicy(),
+			pluginapi.DevicePluginPath + "nvidia-dp2idan15.sock"),
 	}
 }
 
