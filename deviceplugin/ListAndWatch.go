@@ -8,8 +8,9 @@ import (
 
 // ListAndWatch lists devices and update that list according to the health status
 func (m *DanaDevicePlugin) ListAndWatch(e *pluginapi.Empty, s pluginapi.DevicePlugin_ListAndWatchServer) error {
+	fmt.Print("devices:     ",(&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()}))
 	s.Send(&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()})
-	fmt.Print((&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()}))
+
 	fmt.Print("THIS iS LISTANDWATCH 1 \n\n")
 	for {
 		select {

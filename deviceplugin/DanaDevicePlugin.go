@@ -63,6 +63,7 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 	var pdevs []*pluginapi.Device
 	for _, d := range m.cachedDevices {
 		pdevs = append(pdevs, &d.Device)
+		pdevs = append(pdevs, &d.Device)
 	}
 	return pdevs
 }
