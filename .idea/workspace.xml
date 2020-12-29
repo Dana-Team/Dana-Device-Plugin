@@ -4,16 +4,31 @@
     <list default="true" id="ec4ba89b-f78b-460a-ba77-ddeed524b1ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/deviceplugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/deviceplugin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deviceplugin/nvidia.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/nvidia.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deviceplugin/Allocation.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/Allocation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" path="/usr/lib/go-1.13" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/../../../.." />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1m19aJMZJ1Dw8HCNJGGTcV5QfCq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -45,18 +61,22 @@
       <screen x="0" y="851" width="1536" height="864" />
     </state>
     <state x="474" y="1095" key="#com.intellij.fileTypes.FileTypeChooser/0.851.1536.864/1920.0.1080.1920@0.851.1536.864" timestamp="1608651317122" />
-    <state x="2248" y="724" key="FileChooserDialogImpl" timestamp="1608716333375">
+    <state x="2248" y="724" key="FileChooserDialogImpl" timestamp="1609153125052">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state x="2248" y="724" key="FileChooserDialogImpl/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608716333375" />
-    <state x="1838" y="617" key="SettingsEditor" timestamp="1608716343044">
+    <state x="2248" y="724" key="FileChooserDialogImpl/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1609153125052" />
+    <state x="2184" y="682" key="RollbackChangesDialog" timestamp="1609153057973">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state x="1838" y="617" key="SettingsEditor/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1608716343044" />
-    <state x="1973" y="699" width="843" height="568" key="find.popup" timestamp="1609148934330">
+    <state x="2184" y="682" key="RollbackChangesDialog/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1609153057973" />
+    <state x="1954" y="601" key="SettingsEditor" timestamp="1609153128319">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
-    <state x="1973" y="699" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1609148934330" />
+    <state x="1954" y="601" key="SettingsEditor/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1609153128319" />
+    <state x="1973" y="699" width="843" height="568" key="find.popup" timestamp="1609155448918">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1973" y="699" width="843" height="568" key="find.popup/0.851.1536.864/1920.0.1080.1920@1920.0.1080.1920" timestamp="1609155448918" />
     <state x="2190" y="881" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608718696079">
       <screen x="1920" y="0" width="1080" height="1920" />
     </state>
