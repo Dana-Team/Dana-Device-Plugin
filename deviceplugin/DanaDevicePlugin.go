@@ -63,10 +63,12 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 	var pdevs []*pluginapi.Device
 	for _, d := range m.cachedDevices {
 		var fakeID string
+		var fakeDevice pluginapi.Device
+		fakeDevice = d.Device
+		fakeDevice.ID = fakeID
 		fakeID = d.Device.ID + "shitfuck"
 		pdevs = append(pdevs, &d.Device)
-		d.Device.ID = fakeID
-		pdevs = append(pdevs, &d.Device)
+		pdevs = append(pdevs, &fakeDevice)
 	}
 	return pdevs
 }
