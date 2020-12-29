@@ -43,9 +43,9 @@ func NewDanaDevicePlugin(resourceName string, resourceManager ResourceManager,  
 }
 
 
-func (m *DanaDevicePlugin) GetDevicePluginOptions(context.Context, *pluginapi.Empty) (*pluginapi.DevicePluginOptions, error) {
-	return &pluginapi.DevicePluginOptions{}, nil
-}
+//func (m *DanaDevicePlugin) GetDevicePluginOptions(context.Context, *pluginapi.Empty) (*pluginapi.DevicePluginOptions, error) {
+	//return &pluginapi.DevicePluginOptions{}, nil
+//}
 
 
 func (m *DanaDevicePlugin) DeviceExists(id string) bool {
