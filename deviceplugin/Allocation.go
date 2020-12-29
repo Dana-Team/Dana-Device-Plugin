@@ -64,6 +64,8 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 		allocated := m.allocatePolicy.Allocate(available, required, int(req.AllocationSize))
 
+		fmt.Print("\n allocated  : ", allocated,"\n")
+
 		var deviceIds []string
 		for _, device := range allocated {
 			deviceIds = append(deviceIds, device.UUID)
