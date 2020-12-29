@@ -133,6 +133,15 @@ func (m *DanaDevicePlugin) PreStartContainer(context.Context, *pluginapi.PreStar
 return &pluginapi.PreStartContainerResponse{}, nil
 }
 
+// GetDevicePluginOptions returns the values of the optional settings for this plugin
+func (m *DanaDevicePlugin) GetDevicePluginOptions(context.Context, *pluginapi.Empty) (*pluginapi.DevicePluginOptions, error) {
+	options := &pluginapi.DevicePluginOptions{
+		GetPreferredAllocationAvailable: (m.allocatePolicy != nil),
+	}
+	return options, nil
+}
+
+
 // dial establishes the gRPC communication with the registered device plugin.
 func (m *DanaDevicePlugin) dial(unixSocketPath string, timeout time.Duration) (*grpc.ClientConn, error) {
 	c, err := grpc.Dial(unixSocketPath, grpc.WithInsecure(), grpc.WithBlock(),
