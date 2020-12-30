@@ -7,6 +7,7 @@ import (
 	"golang.org/x/net/context"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 	"strings"
+	"strconv"
 )
 
 var passDeviceSpecs = flag.Bool("pass-device-specs", false, "pass the list of DeviceSpecs to the kubelet on Allocate()")
@@ -57,12 +58,13 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 	fmt.Print("\n AvailableDeviceIDs  ALL :%s" ,r.ContainerRequests[0],"\n")
 
 	for _, req := range r.ContainerRequests {
-
-		fake := strings.Contains("fake",req)
-		if fake != false {
-			realreq :=strings.Trim(req,"fake" )
-			fmt.Print(" \n REALREQ:   %v",realreq, "\n")
-		}
+		t := req.AvailableDeviceIDs
+		fmt.Print("\n T :   ",t ,"\n")
+		//fake := strings.Contains("fake",req)
+		//if fake != false {
+		//	realreq :=strings.Trim(req,"fake" )
+	//		fmt.Print(" \n REALREQ:   %v",realreq, "\n")
+	//	}
 
 
 		available, err := gpuallocator.NewDevicesFrom(req.AvailableDeviceIDs)
