@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ec4ba89b-f78b-460a-ba77-ddeed524b1ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/deviceplugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/deviceplugin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deviceplugin/Allocation.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/Allocation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deviceplugin/DanaDevicePlugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/deviceplugin/DanaDevicePlugin.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

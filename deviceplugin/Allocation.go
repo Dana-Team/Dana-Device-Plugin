@@ -18,7 +18,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 	responses := pluginapi.AllocateResponse{}
 
 	for _, req := range reqs.ContainerRequests {
-		fmt.Print(("reqets ======= %v\n\n"),reqs.ContainerRequests)
+		fmt.Print(("reqets  :\n\n"),reqs.ContainerRequests)
 		for _, id := range req.DevicesIDs {
 
 			fmt.Print("\n id :", id, "\n" )
@@ -63,14 +63,14 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 	for _, req := range r.ContainerRequests {
 
-		for j, i := range req.AvailableDeviceIDs {
-			fmt.Print("\n",i,"\n")
-			realreq :=strings.Trim(i,"fake")
-			fmt.Print("\nafter trim ",realreq,"\n")
-			req.AvailableDeviceIDs[j] = realreq
-		}
+	//	for j, i := range req.AvailableDeviceIDs {
+	//		fmt.Print("\n",i,"\n")
+	//		realreq :=strings.Trim(i,"fake")
+	//		fmt.Print("\nafter trim ",realreq,"\n")
+	//		req.AvailableDeviceIDs[j] = realreq
+//		}
 
-		fmt.Print("\n req after trim :",req, "\n")
+	//	fmt.Print("\n req after trim :",req, "\n")
 		//t := req.AvailableDeviceIDs[0]
 		//fmt.Print("\n T :   ",t ,"\n")
 		//fake := strings.Contains("fake",req)

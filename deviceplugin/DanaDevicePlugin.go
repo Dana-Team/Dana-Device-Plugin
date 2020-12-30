@@ -6,6 +6,8 @@ import (
 	"google.golang.org/grpc"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 	"os"
+	"strconv"
+
 	//"golang.org/x/net/context"
 )
 
@@ -61,16 +63,16 @@ func (m *DanaDevicePlugin) DeviceExists(id string) bool {
 
 func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 	var pdevs []*pluginapi.Device
-	for _, d := range m.cachedDevices {
-		var i int = 0
+	for i, d := range m.cachedDevices {
+		var s string
 		var fakeID string
 		var fakeDevice pluginapi.Device
 		fakeDevice = d.Device
-		fakeID = d.Device.ID + "fake"
+		s=strconv.Itoa(i)
+		fakeID = d.Device.ID + s
 		fakeDevice.ID = fakeID
 		pdevs = append(pdevs, &d.Device)
 		pdevs = append(pdevs, &fakeDevice)
-		i=i+1
 	}
 	return pdevs
 }
