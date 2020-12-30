@@ -64,8 +64,8 @@ func (m *DanaDevicePlugin) DeviceExists(id string) bool {
 func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 	var pdevs []*pluginapi.Device
 	for _, d := range m.cachedDevices {
-		fakeDevice := d.Device
 		for j := 0 ; j <2 ; j++{
+			fakeDevice := d.Device
 			fakeDevice.ID = fakeDevice.ID + "-" + strconv.Itoa(j)
 			pdevs = append(pdevs, &fakeDevice)
 		}
