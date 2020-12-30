@@ -50,28 +50,24 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *pluginapi.PreferredAllocationRequest) (*pluginapi.PreferredAllocationResponse, error) {
 	fmt.Print( " \n You Entered the GetPreferredAllocation FUNCTION \n")
 	response := &pluginapi.PreferredAllocationResponse{}
-	 fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[0],"\n")
-	fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[1],"\n")
-	fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[2],"\n")
+	 fmt.Print("\n AvailableDeviceIDs 1  :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[0],"\n")
+	fmt.Print("\n AvailableDeviceIDs  2 :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[1],"\n")
+	fmt.Print("\n AvailableDeviceIDs  3 :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[2],"\n")
+	fmt.Print("\n AvailableDeviceIDs  4 :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[3],"\n")
+	fmt.Print("\n AvailableDeviceIDs  ALL :%s" ,r.ContainerRequests[0],"\n")
+
 	for _, req := range r.ContainerRequests {
-		fmt.Print("\n req :  ",req ,"/n")
 		available, err := gpuallocator.NewDevicesFrom(req.AvailableDeviceIDs)
 		if err != nil {
 			return nil, fmt.Errorf("Unable to retrieve list of available devices: %v", err)
 		}
-
-		fmt.Print("\n available  : %v ",available ,"\n")
 
 		required, err := gpuallocator.NewDevicesFrom(req.MustIncludeDeviceIDs)
 		if err != nil {
 			return nil, fmt.Errorf("Unable to retrieve list of required devices: %v", err)
 		}
 
-		fmt.Print("\n required  : ",required ,"\n")
-
 		allocated := m.allocatePolicy.Allocate(available, required, int(req.AllocationSize))
-
-		fmt.Print("\n allocated  : ", allocated,"\n")
 
 		var deviceIds []string
 		for _, device := range allocated {
