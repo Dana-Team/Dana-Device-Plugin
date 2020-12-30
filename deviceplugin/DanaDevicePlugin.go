@@ -66,7 +66,7 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 		var fakeID string
 		var fakeDevice pluginapi.Device
 		fakeDevice = d.Device
-		fakeID = d.Device.ID + "fake-" + i
+		fakeID = d.Device.ID + "fake"
 		fakeDevice.ID = fakeID
 		pdevs = append(pdevs, &d.Device)
 		pdevs = append(pdevs, &fakeDevice)
