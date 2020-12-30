@@ -20,9 +20,13 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 	for _, req := range reqs.ContainerRequests {
 		fmt.Print(("reqets ======= %v\n\n"),reqs.ContainerRequests)
 		for _, id := range req.DevicesIDs {
-			fmt.Print("id %vfdfdfdfdfdf\n\n ", id )
 
-			if !m.DeviceExists(id) {
+			fmt.Print("\n id :", id, "\n" )
+
+			realid :=strings.Trim(id,"fake")
+
+
+			if !m.DeviceExists(realid) {
 				return nil, fmt.Errorf("invalid allocation request for '%s': unknown device: %s", m.resourceName, id)
 			}
 		}
@@ -58,6 +62,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 	fmt.Print("\n AvailableDeviceIDs  ALL :%s" ,r.ContainerRequests[0],"\n")
 
 	for _, req := range r.ContainerRequests {
+
 		for j, i := range req.AvailableDeviceIDs {
 			fmt.Print("\n",i,"\n")
 			realreq :=strings.Trim(i,"fake")
