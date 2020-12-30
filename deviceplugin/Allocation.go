@@ -51,6 +51,8 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 	fmt.Print( " \n You Entered the GetPreferredAllocation FUNCTION \n")
 	response := &pluginapi.PreferredAllocationResponse{}
 	 fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[0].AvailableDeviceIDs[0],"\n")
+	fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[1].AvailableDeviceIDs[0],"\n")
+	fmt.Print("\n AvailableDeviceIDs  :%s" ,r.ContainerRequests[2].AvailableDeviceIDs[0],"\n")
 	for _, req := range r.ContainerRequests {
 		fmt.Print("\n req :  ",req ,"/n")
 		available, err := gpuallocator.NewDevicesFrom(req.AvailableDeviceIDs)
