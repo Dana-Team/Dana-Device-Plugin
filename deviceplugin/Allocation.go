@@ -61,6 +61,8 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 		for _, i := range req.AvailableDeviceIDs {
 			fmt.Print("\n",i,"\n")
+			realreq :=strings.Trim(i,"fake")
+			fmt.Print(realreq)
 
 		}
 		//t := req.AvailableDeviceIDs[0]
