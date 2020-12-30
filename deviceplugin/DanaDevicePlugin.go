@@ -75,6 +75,7 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 			pdevs = append(pdevs, &fakeDevice)
 		}
 	}
+	fmt.Print("\n pdevs  : ", pdevs,"\n")
 	return pdevs
 }
 
