@@ -49,7 +49,7 @@ func (p *bestEffortPolicy) Allocate(available []*Device, required []*Device, siz
 	// all of the GPUs 'required' by the allocation.
 	fmt.Print("\n available   :\n", available,"\n")
 	fmt.Print("\n required   :\n", required,"\n")
-
+	fmt.Print("\n size   :\n", size,"\n")
 	bestPartition := [][]*Device(nil)
 	bestScore := 0
 	iterateGPUPartitions(available, size, func(candidate [][]*Device) {
@@ -240,6 +240,10 @@ func iterateGPUPartitions(devices []*Device, size int, callback func([][]*Device
 	var iterate func(devices []*Device, size int, accum [][]*Device)
 	iterate = func(devices []*Device, size int, accum [][]*Device) {
 		// Padding should ensure that his never happens.
+		fmt.Print("\n size from panic    :",size ,"\n")
+		fmt.Print("\n device len from panic    :",len(devices),"\n")
+		fmt.Print("\n device  from panic    :",devices,"\n")
+
 		if size > len(devices) {
 			panic("Internal error in best effort allocation policy")
 		}
