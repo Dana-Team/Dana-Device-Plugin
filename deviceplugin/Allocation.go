@@ -87,6 +87,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 	//		fmt.Print(" \n REALREQ:   %v",realreq, "\n")
 	//	}
 
+		fmt.Print("\n before AvailableDeviceIDs \n")
 
 		available, err := gpuallocator.NewDevicesFrom(req.AvailableDeviceIDs)
 		if err != nil {
@@ -101,7 +102,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 		allocated := m.allocatePolicy.Allocate(available, required, int(req.AllocationSize))
 		fmt.Print("\n passed allocated \n")
-		
+
 		var deviceIds []string
 		for _, device := range allocated {
 			deviceIds = append(deviceIds, device.UUID)
