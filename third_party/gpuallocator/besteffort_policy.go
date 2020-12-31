@@ -35,18 +35,19 @@ func (p *bestEffortPolicy) Allocate(available []*Device, required []*Device, siz
 	if size <= 0 {
 		return []*Device{}
 	}
-
+	fmt.Print("\n passed 1 check\n")
 	if len(available) < size {
 		return []*Device{}
 	}
-
+	fmt.Print("\n passed 2 check\n")
 	if len(required) > size {
 		return []*Device{}
 	}
-
+	fmt.Print("\n passed 3 check\n")
 	// Find the highest scoring GPU partition with sets of of size 'size'.
 	// Don't consider partitions that don't have at least one set that contains
 	// all of the GPUs 'required' by the allocation.
+	fmt.Print("\n devices    :\n",[]*Device{} ,"\n")
 	bestPartition := [][]*Device(nil)
 	bestScore := 0
 	iterateGPUPartitions(available, size, func(candidate [][]*Device) {
