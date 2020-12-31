@@ -93,7 +93,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 
 		if req.AllocationSize != 1 {
-			fmt.Print("\n Asked for more then 1 device")
+			fmt.Print("\n Asked for more then 1 device",req.AllocationSize,"\n")
 		}
 		allocated := m.allocatePolicy.Allocate(available, required, int(req.AllocationSize))
 
