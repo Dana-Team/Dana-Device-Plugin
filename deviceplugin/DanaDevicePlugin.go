@@ -1,7 +1,7 @@
 package deviceplugin
 
 import (
-	"fmt"
+//	"fmt"
 	"github.com/Dana-Team/Dana-Device-Plugin/third_party/gpuallocator"
 	"google.golang.org/grpc"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"

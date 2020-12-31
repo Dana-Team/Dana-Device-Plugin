@@ -7,7 +7,7 @@ import (
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 	"log"
 	"net"
-	"fmt"
+	//"fmt"
 	"os"
 	"path"
 	"time"
