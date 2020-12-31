@@ -76,7 +76,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 		for j, i := range req.AvailableDeviceIDs {
 			fmt.Print("\n",i,"\n")
-			s=trimLastChar(i)
+			s:=trimLastChar(i)
 
 			fmt.Print("\nafter trim ",s,"\n")
 			req.AvailableDeviceIDs[j] = s
