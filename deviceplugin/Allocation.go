@@ -25,18 +25,12 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 			fmt.Print("\n id    :", id, "\n" )
 
-			//realid :=strings.Trim(id,"fake")
-			//s := id
-			//sz := len(s)
-		//	if sz > 0 && s[sz-1]== '+' {
-		//		s=s[:sz-1]
-		//	}
-//
-		//	id = s
+			s:=trimLastChar(id)
+
 			fmt.Print("\n id after remove  :",id,"\n")
 
 
-			if !m.DeviceExists(id) {
+			if !m.DeviceExists(s) {
 				return nil, fmt.Errorf("invalid allocation request for '%s': unknown device: %s", m.resourceName, id)
 			}
 		}
