@@ -11,7 +11,7 @@ func (m *DanaDevicePlugin) ListAndWatch(e *pluginapi.Empty, s pluginapi.DevicePl
 	fmt.Print("\n\n devices:     ",(&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()}) ,"\n")
 	s.Send(&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()})
 
-	fmt.Print("THIS iS LISTANDWATCH 1 \n\n")
+	fmt.Print("THIS iS LISTANDWATCH \n\n")
 	for {
 		select {
 		case <-m.stop:
@@ -21,7 +21,6 @@ func (m *DanaDevicePlugin) ListAndWatch(e *pluginapi.Empty, s pluginapi.DevicePl
 			log.Printf("'%s' device marked unhealthy: %s", m.resourceName, d.ID)
 			s.Send(&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()})
 			fmt.Print((&pluginapi.ListAndWatchResponse{Devices: m.ApiDevices()}))
-			fmt.Print("THIS iS LISTANDWATCH 2 \n\n")
 
 		}
 	}

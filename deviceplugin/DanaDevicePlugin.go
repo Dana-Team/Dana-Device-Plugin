@@ -70,7 +70,6 @@ func (m *DanaDevicePlugin) ApiDevices() []*pluginapi.Device {
 			pdevs = append(pdevs, &fakeDevice)
 		}
 	}
-	fmt.Print("\n pdevs  : ", pdevs,"\n")
 	return pdevs
 }
 
@@ -78,7 +77,6 @@ func (m *DanaDevicePlugin) ApiDeviceSpecs(filter []string) []*pluginapi.DeviceSp
 	var specs []*pluginapi.DeviceSpec
 
 
-	fmt.Print(" \n Start ApiDeviceSpecs FUNC   : \n m.cachedDevices ")
 	paths := []string{
 		"/run/nvidia/driver/dev/nvidiactl",
 		"/run/nvidia/driver/dev/nvidia-uvm",

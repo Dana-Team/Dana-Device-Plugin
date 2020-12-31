@@ -42,8 +42,6 @@ func (g *GpuDeviceManager) Devices() []*Device {
 	n, err := nvml.GetDeviceCount()
 	check(err)
 
-	fmt.Print("\n \n the DEVICES FUNC IS STARTED   :",n )
-
 	var devs []*Device
 	for i := uint(0); i < n; i++ {
 		d, err := nvml.NewDeviceLite(i)

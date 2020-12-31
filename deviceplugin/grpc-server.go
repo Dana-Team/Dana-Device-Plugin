@@ -160,7 +160,6 @@ func (m *DanaDevicePlugin) dial(unixSocketPath string, timeout time.Duration) (*
 func (m *DanaDevicePlugin) initialize() {
 	m.cachedDevices = m.Devices()
 	m.avalDevices = m.Devices()
-	fmt.Print("\n\n cachedDevices FROM  initialize :     " ,m.Devices())
 	m.server = grpc.NewServer([]grpc.ServerOption{}...)
 	m.health = make(chan *Device)
 	m.stop = make(chan interface{})
