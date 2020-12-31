@@ -33,7 +33,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 			fmt.Print("\n id after remove  :",s,"\n")
 
-			reqs2.ContainerRequests[j].DevicesIDs = s
+			reqs2.ContainerRequests[j].DevicesIDs[i] = s
 			i++
 
 			if !m.DeviceExists(s) {
