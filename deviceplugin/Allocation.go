@@ -7,6 +7,8 @@ import (
 	"golang.org/x/net/context"
 	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 	"strings"
+	"unicode/utf8"
+
 	//"strconv"
 )
 
@@ -60,6 +62,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 }
 
 
+
 func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *pluginapi.PreferredAllocationRequest) (*pluginapi.PreferredAllocationResponse, error) {
 	fmt.Print( " \n You Entered the GetPreferredAllocation FUNCTION \n")
 	response := &pluginapi.PreferredAllocationResponse{}
@@ -73,10 +76,8 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 
 		for j, i := range req.AvailableDeviceIDs {
 			fmt.Print("\n",i,"\n")
-			s := i
-			sz := len(s)
-			if sz > 0 && s[sz-2]== '+' {
-				s=s[:sz-2 ]}
+			s=trimLastChar(i)
+
 			fmt.Print("\nafter trim ",s,"\n")
 			req.AvailableDeviceIDs[j] = s
 		}
@@ -110,4 +111,11 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 		response.ContainerResponses = append(response.ContainerResponses, resp)
 	}
 	return response, nil
+}
+func trimLastChar(s string) string {
+	r, size := utf8.DecodeLastRuneInString(s)
+	if r == utf8.RuneError && (size == 0 || size == 1) {
+		size = 0
+	}
+	return s[:len(s)-size]
 }
