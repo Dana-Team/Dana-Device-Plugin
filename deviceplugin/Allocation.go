@@ -19,29 +19,34 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 	fmt.Print("start allocation\n\n")
 	responses := pluginapi.AllocateResponse{}
 
+	var reqs2 *pluginapi.AllocateRequest
+	reqs2 = reqs
 	for _, req := range reqs.ContainerRequests {
 		fmt.Print(("reqets  :\n\n"),reqs.ContainerRequests)
+		i := 0
 		for _, id := range req.DevicesIDs {
 
 			fmt.Print("\n id    :", id, "\n" )
 
 			s:=trimLastChar(id)
 
-			fmt.Print("\n id after remove  :",id,"\n")
+			fmt.Print("\n id after remove  :",s,"\n")
 
+			reqs2.ContainerRequests[i] = s
+			i++
 
 			if !m.DeviceExists(s) {
 				return nil, fmt.Errorf("invalid allocation request for '%s': unknown device: %s", m.resourceName, id)
 			}
 		}
-			
+			fmt.Print("\n req2    : ",reqs2,"\n")
 		response := pluginapi.ContainerAllocateResponse{
 			Envs: map[string]string{
-				m.allocateEnvvar: strings.Join(req.DevicesIDs, ","),
+				m.allocateEnvvar: strings.Join(reqs2.DevicesIDs, ","),
 			},
 		}
 		if *passDeviceSpecs {
-			response.Devices = m.ApiDeviceSpecs(req.DevicesIDs)
+			response.Devices = m.ApiDeviceSpecs(reqs2.DevicesIDs)
 		}
 
 		responses.ContainerResponses = append(responses.ContainerResponses, &response)
@@ -106,6 +111,7 @@ func (m *DanaDevicePlugin) GetPreferredAllocation(ctx context.Context, r *plugin
 	}
 	return response, nil
 }
+
 func trimLastChar(s string) string {
 	r, size := utf8.DecodeLastRuneInString(s)
 	if r == utf8.RuneError && (size == 0 || size == 1) {
