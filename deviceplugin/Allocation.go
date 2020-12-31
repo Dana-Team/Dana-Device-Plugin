@@ -21,6 +21,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 	var reqs2 *pluginapi.AllocateRequest
 	reqs2 = reqs
+	j := 0
 	for _, req := range reqs.ContainerRequests {
 		fmt.Print(("reqets  :\n\n"),reqs.ContainerRequests)
 		i := 0
@@ -32,12 +33,13 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 			fmt.Print("\n id after remove  :",s,"\n")
 
-			reqs2.ContainerRequests[i] = s
+			reqs2.ContainerRequests[j].DevicesIDs = s
 			i++
 
 			if !m.DeviceExists(s) {
 				return nil, fmt.Errorf("invalid allocation request for '%s': unknown device: %s", m.resourceName, id)
 			}
+			j++
 		}
 			fmt.Print("\n req2    : ",reqs2,"\n")
 		response := pluginapi.ContainerAllocateResponse{
