@@ -44,11 +44,11 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 			fmt.Print("\n req2    : ",reqs2,"\n")
 		response := pluginapi.ContainerAllocateResponse{
 			Envs: map[string]string{
-				m.allocateEnvvar: strings.Join(reqs2.DevicesIDs, ","),
+				m.allocateEnvvar: strings.Join(reqs2.ContainerRequests[j].DevicesIDs, ","),
 			},
 		}
 		if *passDeviceSpecs {
-			response.Devices = m.ApiDeviceSpecs(reqs2.DevicesIDs)
+			response.Devices = m.ApiDeviceSpecs(reqs2.ContainerRequests[j].DevicesIDs)
 		}
 
 		responses.ContainerResponses = append(responses.ContainerResponses, &response)
