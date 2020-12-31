@@ -244,9 +244,9 @@ func iterateGPUPartitions(devices []*Device, size int, callback func([][]*Device
 		fmt.Print("\n device len from panic    :",len(devices),"\n")
 		fmt.Print("\n device  from panic    :",devices,"\n")
 
-		if size > len(devices) {
-			panic("Internal error in best effort allocation policy")
-		}
+		//if size > len(devices) {
+	//		panic("Internal error in best effort allocation policy")
+	//	}
 
 		// Base case once we've reached 'size' number of devices.
 		if size == len(devices) {
