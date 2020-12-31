@@ -39,9 +39,10 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 			if !m.DeviceExists(s) {
 				return nil, fmt.Errorf("invalid allocation request for '%s': unknown device: %s", m.resourceName, id)
 			}
-			j++
+
 		}
-			fmt.Print("\n req2    : ",reqs2,"\n")
+		j++
+		fmt.Print("\n req2    : ",reqs2,"\n")
 		response := pluginapi.ContainerAllocateResponse{
 			Envs: map[string]string{
 				m.allocateEnvvar: strings.Join(reqs2.ContainerRequests[j].DevicesIDs, ","),
