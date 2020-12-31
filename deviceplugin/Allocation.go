@@ -41,7 +41,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 			}
 
 		}
-		j++
+
 		fmt.Print("\n req2    : ",reqs2,"\n")
 		response := pluginapi.ContainerAllocateResponse{
 			Envs: map[string]string{
@@ -54,7 +54,7 @@ func (m *DanaDevicePlugin) Allocate(ctx context.Context, reqs *pluginapi.Allocat
 
 		responses.ContainerResponses = append(responses.ContainerResponses, &response)
 		fmt.Print("\n\n\n responsss ===  %v",responses.ContainerResponses	)
-
+		j++
 	}
 	fmt.Print("\n\n reponse_return  %v", &responses )
 
